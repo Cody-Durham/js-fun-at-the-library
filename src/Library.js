@@ -1,8 +1,8 @@
 
 function createLibrary(name, shelves) {
   var library = {
-    name: name, // this is the lib name
-    shelves: { // these are the shelfs in the lib
+    name: name,
+    shelves: {
       fantasy: [],
       fiction: [],
       nonFiction: [],
@@ -10,6 +10,8 @@ function createLibrary(name, shelves) {
   }
   return library
 };
+
+
 
 function addBook(library, bookName) {
   if (bookName.genre === 'fantasy') {
@@ -21,14 +23,11 @@ function addBook(library, bookName) {
   }
 };
 
-// function checkoutBook(library, bookName) {
-// return `You have now checked out ${bookName} from the ${library.name}`
-// };
+
 
 function checkoutBook(library, bookName) {
 
   for (var i = 0; i < library.shelves.fantasy.length; i++) {
-    // console.log('TEST', library.shelves.fiction[i].title);
       if (library.shelves.fantasy[i].title === bookName) {
         return `You have now checked out ${bookName} from the ${library.name}`
     }
@@ -47,27 +46,6 @@ function checkoutBook(library, bookName) {
   return `Sorry, there are currently no copies of ${bookName} available at the ${library.name}`
 };
 
-// function checkoutBook(library, bookName) {
-//   var bookOnShelf;
-//   for (var i = 0; i < 3; i++) {
-//     if (library.shelves[i] === bookName) {
-//       return `You have now checked out ${bookName} from the ${library.name}`
-//     }
-//     // else {
-//     //   return `Sorry, there are currently no copies of The Fifth Season available at the Denver Public Library`
-//     // }
-//   }
-// };
-
-// function checkoutBook(library, bookName) {
-//   for (var i = 0; i < library.length; i++) {
-//     if (library.shelves[i].includes(bookName)) {
-//       return `You have now checked out ${bookName} from the ${library.name}`
-//   } else {
-//     return `Sorry, there are currently no copies fo ${bookName} available at the ${library.name}`
-//   }
-// }
-// };
 
 
 module.exports = {

@@ -1,11 +1,7 @@
-// function shelfBook(bookObj, shelf) {
-//   if (shelf.length < 3) {
-//     shelf.unshift(bookObj);
-//   }
-// };
 function shelfBook(bookObj, shelf) {
   shelf.unshift(bookObj)
 };
+
 
 function unshelfBook(bookName, shelf) {
   for (var i = 0; i < shelf.length; i++) {
@@ -15,6 +11,7 @@ function unshelfBook(bookName, shelf) {
   }
 };
 
+
 function listTitles(shelf) {
   var bookTitles = [];
   for (var i = 0; i < shelf.length; i++) {
@@ -22,6 +19,7 @@ function listTitles(shelf) {
   }
   return bookTitles.join(', ')
 };
+
 
 function searchShelf(shelf, bookName) {
   var hasBook = false

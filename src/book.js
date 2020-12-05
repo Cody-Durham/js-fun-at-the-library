@@ -12,8 +12,8 @@ function buildMainCharacter(name, age, pronouns) {
   return character
 };
 
+
 function saveReview(words, reviews) {
-  // reviews.push(words)
   if (reviews.includes(words)) {
     return
   } else {
@@ -21,9 +21,11 @@ function saveReview(words, reviews) {
   }
 };
 
+
 function calculatePageCount(title) {
   return title.length * 20
 };
+
 
 function writeBook(title, mainCharacter, genre) {
   var book = {
@@ -34,6 +36,7 @@ function writeBook(title, mainCharacter, genre) {
   }
   return book
 };
+
 
 function editBook(title) {
   return title.pageCount *= .75
